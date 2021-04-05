@@ -16,6 +16,13 @@ function App() {
   return (
     <div className="App">
       hola mundo
+      <ul>
+          {
+              !todos ? 'Cargando...' : todos.map((todo, index)=>{
+                  return<li>{todo.title}</li>
+              })
+          }
+      </ul>
     </div>
   );
 }
